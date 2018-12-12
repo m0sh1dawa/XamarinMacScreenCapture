@@ -729,6 +729,9 @@
                             <constraint firstItem="qG1-rm-gSu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="uFk-eY-qXK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ImageView" destination="nil-HI-I3F" id="0Bd-rB-4NW"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

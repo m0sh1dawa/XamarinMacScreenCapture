@@ -9,17 +9,21 @@ using System.CodeDom.Compiler;
 
 namespace XamarinMacScreenCapture
 {
-	[Register ("ViewController")]
-	partial class ViewController
-	{
-		[Action ("ClickedCaptureButton:")]
-		partial void ClickedCaptureButton (Foundation.NSObject sender);
+    [Register ("ViewController")]
+    partial class ViewController
+    {
+        [Outlet]
+        AppKit.NSImageCell ImageView { get; set; }
 
-		[Action ("ImageView:")]
-		partial void ImageView (Foundation.NSObject sender);
-		
-		void ReleaseDesignerOutlets ()
-		{
-		}
-	}
+        [Action ("ClickedCaptureButton:")]
+        partial void ClickedCaptureButton (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+            if (ImageView != null) {
+                ImageView.Dispose ();
+                ImageView = null;
+            }
+        }
+    }
 }
